@@ -9,7 +9,7 @@
 	crossorigin="anonymous">
 <style>
 body {
-	background-color: #9c27b0;
+	background-color: black;
 }
 
 .action_card_1 {

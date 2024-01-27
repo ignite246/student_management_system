@@ -23,7 +23,7 @@ public class DeleteStudentServlet extends HttpServlet {
 		
 		int rowDeleted = obj.deleteStudentService(studentId);
 		if(rowDeleted>0) {
-			System.out.println("Record deleted succsefully - Redirecting to all student page-");
+			System.out.println("Record deleted successfully - Redirecting to all student page-");
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/allStudents.jsp");
 			dispatcher.forward(request,response);
 		}

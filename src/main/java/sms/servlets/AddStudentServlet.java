@@ -2,14 +2,15 @@ package sms.servlets;
 
 import java.io.IOException;
 
+
+import sms.entities.Student;
+import sms.services.StudentService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import sms.entities.Student;
-import sms.services.StudentService;
 
 public class AddStudentServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -34,7 +35,7 @@ public class AddStudentServlet extends HttpServlet {
 		
 		int rowInserted = obj.addStudentService(student);
 		if(rowInserted>0) {
-			System.out.println("New Record added succsefully - Redirecting to all student page-");
+			System.out.println("New Record added successfully - Redirecting to all student page-");
 			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/allStudents.jsp");
 			dispatcher.forward(request,response);
 		}
